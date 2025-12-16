@@ -1,0 +1,47 @@
+export const KEYWORD_SUGGESTIONS = [
+  "marketing",
+  "social media",
+  "tech",
+  "development",
+  "design",
+  "finance",
+  "healthcare",
+  "sales",
+  "AI",
+  "blockchain",
+  "cloud",
+  "mobile",
+  "b2b",
+  "b2c",
+  "saas",
+  "crypto",
+  "consulting",
+  "logistics",
+  "retail",
+  "fashion",
+  "food",
+  "travel",
+  "education",
+];
+
+export const TOWN_OPTIONS = [
+  "Cracow",
+  "Warsaw",
+  "London",
+  "New York",
+  "Witow",
+  "Amsterdam",
+  "Barcelona",
+  "Rome",
+  "Oslo",
+  "Helsinki",
+  "Zurich",
+  "Munich",
+];
+
+export const FIELD_PLACEHOLDERS: { [key: string]: string } = {
+  "Campaign name:": "e.g. Summer Sale",
+  "Bid amount:": "e.g. 150",
+  "Campaign fund:": "e.g. 5000",
+  "Radius:": "e.g. 50 km",
+};
