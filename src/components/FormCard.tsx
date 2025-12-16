@@ -164,15 +164,26 @@ function FormCard({
                     ))}
                   </datalist>
                 </ChipContainer>
-              ) : item.label === "Bid amount:" || item.label === "Campaign fund:" || item.label === "Radius:" ? (
+              ) : item.label === "Bid amount:" ||
+                item.label === "Campaign fund:" ||
+                item.label === "Radius:" ? (
                 <Input
                   type="number"
                   value={item.value}
                   onChange={(e) => onChange(index, e.target.value)}
                   onKeyDown={(e) => {
-                    if (e.key === "e" || e.key === "E" || e.key === "-" || e.key === "+") {
+                    if (
+                      e.key === "e" ||
+                      e.key === "E" ||
+                      e.key === "-" ||
+                      e.key === "+"
+                    ) {
                       e.preventDefault();
                     }
+                  }}
+                  onInput={(e) => {
+                    const target = e.target as HTMLInputElement;
+                    target.value = target.value.replace(/[^0-9]/g, "");
                   }}
                   $isEditing={isEditing}
                   placeholder={item.placeholder}
@@ -223,7 +234,6 @@ const Input = styled.input<{ $isEditing?: boolean }>`
     props.$isEditing ? "var(--text)" : "var(--text-muted"};
   }
 
-  /* Hide number input spinners */
   &[type="number"]::-webkit-inner-spin-button,
   &[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;

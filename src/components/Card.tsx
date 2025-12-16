@@ -153,4 +153,5 @@ const Value = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
+  font-weight: normal;
 `;

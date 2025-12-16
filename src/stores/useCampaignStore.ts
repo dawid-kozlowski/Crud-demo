@@ -2,8 +2,6 @@ import { create } from "zustand";
 import type { Campaign } from "../types";
 import { calculateBalance } from "../lib/utils";
 
-
-
 interface CampaignStoreType {
   selectedCampaign: Campaign | null;
   setSelectedCampaign: (campaign: Campaign | null) => void;
@@ -14,8 +12,6 @@ interface CampaignStoreType {
   deleteCampaign: (id: string) => void;
   balance: number;
 }
-
-
 
 const INITIAL_BUDGET = 200000;
 
