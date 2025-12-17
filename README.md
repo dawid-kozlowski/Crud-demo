@@ -125,7 +125,7 @@ crud/
 │   │   ├── Card.tsx             # Campaign card component (display mode)
 │   │   ├── FormCard.tsx         # Campaign form component (edit/create mode)
 │   │   ├── List.tsx             # Campaign list container
-│   │   ├── Menu.tsx             # Top menu with action buttons
+│   │   ├── Menu.tsx             # Bottom menu with action buttons
 │   │   └── Wrapper.tsx          # Main application wrapper
 │   │
 │   ├── hooks/                    # Custom React hooks
@@ -173,7 +173,7 @@ crud/
 ## 🎨 Features in Detail
 
 ### Balance Component
-Calculates and displays the total balance from all active campaigns. The balance is the sum of all campaign funds for campaigns with "Active" status.
+Calculates and displays the total balance from all active campaigns. The balance is the sum of all campaign funds for present campaigns in the list.
 
 ### Campaign Cards
 - **Display Mode**: Shows campaign details with edit and delete buttons
@@ -182,7 +182,7 @@ Calculates and displays the total balance from all active campaigns. The balance
 
 ### Form Validation
 - Campaign Name: Required field
-- Keywords: Supports comma-separated input and smart suggestions
+- Keywords: Supports smart suggestions
 - Bid Amount & Campaign Fund: Numeric validation
 - Town: Dropdown selection from predefined options
 - Radius: Numeric input with unit (km)
